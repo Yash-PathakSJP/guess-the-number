@@ -17,7 +17,7 @@ guessBtn.addEventListener("click", function () {
   const userGuess = Number(guessInput.value);
   // Validate input
   if (!userGuess || userGuess < 1 || userGuess > 100) {
-    result.textContent = "❌ Please enter a number between 1 and 100!";
+    result.textContent = " Please enter a number between 1 and 100!";
     result.style.color = "red";
     return;
   }
@@ -59,4 +59,5 @@ restartBtn.addEventListener("click", function () {
   guessInput.disabled = false;
   guessBtn.disabled = false;
 });
+
 
