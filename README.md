@@ -17,7 +17,7 @@ The game generates a random number, and the player has to guess it with hints li
 🌐 Works in any modern browser
 
 
-🔗 Play the game live here: 
+🔗 Play the game live here: https://yash-pathaksjp.github.io/guess-the-number/
 
 
 ---
