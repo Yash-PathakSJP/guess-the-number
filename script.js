@@ -2,7 +2,6 @@
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 let minRange = 1;
 let maxRange = 100;
-// Track number of attempts
 let attempts = 0;
 
 // Get references to all important DOM elements
@@ -15,17 +14,13 @@ const attemptsDisplay = document.getElementById("attempts");
 
 // Function to handle user's guess
 guessBtn.addEventListener("click", function () {
-  // Convert input value to a number
   const userGuess = Number(guessInput.value);
-
   // Validate input
   if (!userGuess || userGuess < 1 || userGuess > 100) {
     result.textContent = "❌ Please enter a number between 1 and 100!";
     result.style.color = "red";
     return;
   }
-
-  // Increment attempt counter
   attempts++;
   attemptsDisplay.textContent = attempts;
 
@@ -33,20 +28,17 @@ guessBtn.addEventListener("click", function () {
   if (userGuess === secretNumber) {
     result.textContent = `Correct_You_guessed_the_number in ${attempts} attempts`;
     result.style.color = "green";
-    // Disable input and button after correct guess
     guessInput.disabled = true;
     guessBtn.disabled = true;
   } else if (userGuess < secretNumber) {
     minRange = userGuess + 1;
-    result.textContent = `🔻 Too low! Try a higher number between ${userGuess + 1} and ${maxRange}`;
+    result.textContent = ` Too low! Try a higher number between ${userGuess + 1} and ${maxRange}`;
     result.style.color = "orange";
   } else if (userGuess > secretNumber) {
     maxRange = userGuess - 1;
-    result.textContent = `🔺 Too high! Try a lower number between ${minRange} and ${userGuess - 1}`;
+    result.textContent = ` Too high! Try a lower number between ${minRange} and ${userGuess - 1}`;
     result.style.color = "orange";
   }
-
-  // Clear the input field after each guess
   guessInput.value = "";
 });
 
@@ -67,3 +59,4 @@ restartBtn.addEventListener("click", function () {
   guessInput.disabled = false;
   guessBtn.disabled = false;
 });
+
