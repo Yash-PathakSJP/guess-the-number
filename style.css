@@ -3,18 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+  }  
   /* Body styling: center everything */
   body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #89f7fe, #66a6ff); /* Light blue gradient */
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+  }  
   /* Main game container */
   .container {
     background-color: white;
@@ -25,8 +23,7 @@
     width: 90%;
     max-width: 400px;
     animation: slideIn 0.5s ease-out;
-  }
-  
+  }  
   /* Heading */
   h1 {
     color: #333;
@@ -34,14 +31,11 @@
     align-content: center;
     letter-spacing: 0px;
   }
-  
-  /* Message (instructions) */
   #message {
     font-size: 16px;
     color: #444;
     margin-bottom: 20px;
   }
-  
   /* Input field styling */
   input[type="number"] {
     padding: 10px;
@@ -52,8 +46,7 @@
     border-radius: 10px;
     outline: none;
     transition:border 0.3s ease-in-out;
-  }
-  
+  }  
   /* Buttons */
   button {
     padding: 10px 20px;
@@ -64,8 +57,6 @@
     cursor: pointer;
     transition: background 0.3s ease;
   }
-  
-  /* Guess button styling */
   #guessBtn {
     background-color: #28a745;
     color: white;
@@ -73,8 +64,6 @@
   #guessBtn:hover {
     background-color: #218838;
   }
-  
-  /* Restart button styling */
   #restartBtn {
     background-color: #ffc107;
     color: black;
@@ -82,14 +71,10 @@
   #restartBtn:hover {
     background-color: #e0a800;
   }
-  
-  /* Attempts text */
   #attempts {
     font-weight: bold;
     color: #333;
-  }
-  
-  /* Result text (feedback) */
+  }  
   #result {
     margin-top: 20px;
     font-size: 18px;
@@ -99,4 +84,3 @@
     0%{opacity: 0;}
     100%{ opacity: 1;}
   }
-  /* Footer */
